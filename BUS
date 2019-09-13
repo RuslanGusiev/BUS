@@ -1,0 +1,15 @@
+import numpy as np
+
+number = 0
+stop = 0
+stops = [(5, 0), (6, 1), (5, 2), (7, 3)]
+new_list = []
+print(len(stops))
+for enter, exit in stops:
+    number += enter - exit
+    stop += 1
+    print('Stop #',stop,' ', number)
+    new_list.append(number)
+print('Maximum occupation of the bus:', max(new_list))
+print('Average occupation = ', np.mean(new_list))
+print('Standard Deviation = ', np.std(new_list))
